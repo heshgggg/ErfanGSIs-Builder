@@ -1,12 +1,14 @@
-name: GSI Build
+ name: Downloader
 
-
-jobs:
+ defaults:
+  run:
+    shell: bash
+ 
+ jobs:
   build:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-18.04
     steps:
-       - name: Initializing telegram bot
-         run: |
-               wget https://files.ospanel.io/s/AWuRebWN_bsQy_drD3lm1w/1642422782/open_server_panel_5_4_1_setup.exe
-               curl --upload-file open_server_panel_5_4_1_setup.exe https://free.keep.sh
+      - name: Down
+        run: |
+              wget https://files.ospanel.io/s/CA1q-fki64n2FGYX9eoUMg/1642424484/open_server_panel_5_4_1_setup.exe
+              curl --upload-file open_server_panel_5_4_1_setup.exe https://free.keep.sh
